@@ -1,9 +1,11 @@
 # The theft of the Mona Lisa
 ---
 
-the exercise are adapted to postgresql from the sql-tutorial by [opentechschool](http://opentechschool.github.io/sql-tutorial/)
+the exercises are adapted to postgresql from the sql-tutorial by [opentechschool](http://opentechschool.github.io/sql-tutorial/)
 
-How to find the thief
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Beroud-Louis-Joconde.jpg/170px-Beroud-Louis-Joconde.jpg)
+
+How you will find the thief
 
 When you follow the tutorial you will step-by-step:
 
@@ -43,6 +45,8 @@ Get the names of all people who live in Paris.
 ---
 
 What is the pool of suspects you have left?
+
+![](https://paris1899.de/wp-content/uploads/2019/08/Untitled-design-124.jpg)
 
 
 
