@@ -10,3 +10,7 @@ We will use DBeaver to connect to the PostgreSQL database.
 We will start with some Basics:
 
 [SQL Basics](SQL_Basics/SQL_Exercise.md)
+
+And continue with a codealong to deepen the learned:
+
+[SQL Codealong](SQL_Codealong/Codealong.md)
