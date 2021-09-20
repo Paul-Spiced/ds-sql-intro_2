@@ -11,6 +11,6 @@ We will start with some Basics:
 
 [SQL Basics](SQL_Basics/SQL_Exercise.md)
 
-And continue with a codealong to deepen the learned:
+And continue with exercises to deepen the learned:
 
-[SQL Codealong](SQL_Codealong/Codealong.md)
+[SQL Exercises](SQL_Exercise/Exercise.md)
