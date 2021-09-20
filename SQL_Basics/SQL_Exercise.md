@@ -24,9 +24,9 @@ But we want to change that!
 
 - **Schema**: 
 
-    We are using one database with different schemas so first we have to choose the right one:
+    We are using one database with different schemas so first we have to choose the right one, (use quotes):
     ```SQL
-    SET SCHEMA schema_name; 
+    SET SCHEMA 'schema_name'; 
     ```
 
 ---
