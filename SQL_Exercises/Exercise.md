@@ -22,6 +22,8 @@ In dBeaver set the monalisa as the default schema.
 
 Work in pairs to solve the following tasks
 
+![](https://static.wikia.nocookie.net/s__/images/7/79/Jessica_fletcher.jpeg/revision/latest?cb=20130409163539&path-prefix=sherlockpedia%2Fde)
+
 ### 1. Investigate the tables
 
 Take a look at the table names and columns. What table could have information about traveling?
