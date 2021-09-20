@@ -6,7 +6,7 @@ You need to download [DBeaver](https://dbeaver.io). This is a free multi-platfor
 
 - Open DBeaver and click on the little blue "plugin plus"-icon.
 - Select `PostgreSQL`as database.
-- Copy information of your Heroku Database Credentials to the connection Settings on DBeaver
+- Copy information of the provided Credentials to the connection Settings on DBeaver
     - `Host`
     - `Database`
     - `User`== `Username`
