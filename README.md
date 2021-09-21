@@ -13,4 +13,4 @@ We will start with some Basics:
 
 And continue with exercises to deepen the learned:
 
-[SQL Exercises](SQL_Exercise/Exercise.md)
+[SQL Exercises](SQL_Exercises/Exercise.md)
