@@ -81,9 +81,9 @@ To find out who is the thief, check the text messages stored by the mobile phone
 
 ### 12. Get all text messages  which where sent between 2014-10-20 and 2014-10-25.
 
-### 13. Get all contract ids where the contract.person_id is equal to one of the persons from the results of question 19.
+### 13. Get all contract ids where the contract.person_id is equal to one of the persons from the results of question 7.
 
-### 14 Get all text messages where the sent date between 2014-10-20 and 2014-10-25 and the contract_sender_id is equal to the contract ids where the contract.person_id is equal to one of the persons from the results of question 19.
+### 14 Get all text messages where the sent date between 2014-10-20 and 2014-10-25 and the contract_sender_id is equal to the contract ids where the contract.person_id is equal to one of the persons from the results of question 7.
 
 You see that you got all the required information but the output looks kind of chaotic. You can order an result set according to a column with an order by phrase. The query to get all text messages from 21.10.2014 ordered by time reads
 
