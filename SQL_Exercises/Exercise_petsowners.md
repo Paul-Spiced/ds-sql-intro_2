@@ -11,13 +11,13 @@ You are assisting a vet clinic in making sense of their data. Their data is in t
 5. what is the average age of the pets?
 6. how many owners have more than one pet?
 7. do the owners that have more than one pet have the same kind of pet.
-8. do poeple name their pets like poeple?
+8. do owners name their pets like owners?
 9. Extract the information of petnames and owners side-by-side!
 10. what are the cities with the largest amount of pets?
 
 ## Let's look at some of the procedures those pets had.
 
-1. match procedures to prescriptions!
+1. match procedure history to procedure detailes!
 2. what pets did't get rabies vaccination?
 3. what is the most prevalent type of surgery?
 4. how much did owners spend on their pets?
