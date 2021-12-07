@@ -9,7 +9,7 @@ We will use DBeaver to connect to the PostgreSQL database.
 
 We will start with some Basics:
 
-[SQL Basics](SQL_Basics/SQL_Exercise.md)
+[SQL Basics](https://github.com/neuefische/ds-sql-intro/blob/main/SQL_Basics/SQL_Exercise.md)
 
 let's get some sql practice. And answer the questions in:
 
