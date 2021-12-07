@@ -13,10 +13,10 @@ We will start with some Basics:
 
 let's get some sql practice. And answer the questions in:
 
-[SQL Practice](SQL_Exercises/Exercise_petowners.md)
+[SQL Practice](https://github.com/neuefische/ds-sql-intro/blob/main/SQL_Exercises/Exercise_petsowners.md)
 
 -------
 
 And if this is too boring continue with this if you have some free time:
 
-[SQL Exercises Monalisa](SQL_Complex_Exercises/Exercise_monalisa.md)
+[SQL Exercises Monalisa](https://github.com/neuefische/ds-sql-intro/blob/main/SQL_Exercises_Complex/Exercise_monalisa.md)
