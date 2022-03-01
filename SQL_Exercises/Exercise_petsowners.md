@@ -10,7 +10,7 @@ You are assisting a vet clinic in making sense of their data. Their data is in t
 4. What is the gender balance across pets and species? Hint: [Use GROUP BY](https://www.postgresql.org/docs/9.4/tutorial-agg.html)
 5. What is the average age of the pets? Hint: [Use AVG()](https://www.postgresql.org/docs/9.4/tutorial-agg.html)
 6. How many owners have more than one pet? Hint: [Use GROUP BY HAVING](https://www.postgresql.org/docs/9.4/tutorial-agg.html)
-7. Do the owners that have more than one pet have the same kind of pet. Hint: [Use Subquieries](https://www.w3resource.com/sql/subqueries/understanding-sql-subqueries.php)
+7. Do the owners that have more than one pet have the same kind of pet.
 8. Do owners name their pets like owners? Hint: [Use INNER JOIN](https://www.postgresql.org/docs/8.3/tutorial-join.html)
 9. Extract the information of petnames and owners side-by-side! Hint: [Use FULL JOIN](https://www.postgresql.org/docs/8.3/tutorial-join.html)
 10. What are the cities with the largest amount of pets? Hint: [Use INNER JOIN](https://www.postgresql.org/docs/8.3/tutorial-join.html)
