@@ -40,7 +40,7 @@ Expected output:
 Expected output: 
 ![expected output owner of more pets](image/../../images/1.6_owner_more_pets.png)
 
-7. Do the owners that have more than one pet have the same kind of pet. [Use ARRAY_AGG](https://www.postgresqltutorial.com/postgresql-aggregate-functions/postgresql-array_agg-function/)
+7. Do the owners that have more than one pet have the same kind of pet. [Use ARRAY_AGG](https://www.postgresqltutorial.com/postgresql-aggregate-functions/postgresql-array_agg/)
    
 Expected output (one possible approach): 
 ![expected output](image/../../images/1.7_different_kinds_per_owner.png)
@@ -57,7 +57,7 @@ Expected output (only first rows shown):
 
 10.  What are the cities with the largest amount (top 3) of pets? Hint: [Use INNER JOIN](https://www.postgresql.org/docs/8.3/tutorial-join.html)
 
-Expected output:
+Expected output: 
 ![expected output cities with most pets](image/../../images/1.10_cities_most_pets.png)
 
 
