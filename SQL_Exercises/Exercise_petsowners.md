@@ -19,6 +19,6 @@ You are assisting a vet clinic in making sense of their data. Their data is in t
 
 1. Combine the tables with the procedure history and the procedure details. You might have to join tables based on more than one column...
 2. What pets did't get rabies vaccination? Hint: [Use LEFT JOIN](https://www.postgresql.org/docs/8.3/tutorial-join.html), [Use ARRAY_AGG()](https://www.postgresql.org/docs/8.2/functions-aggregate.html) and [Use ALL()](https://www.postgresql.org/docs/9.1/functions-comparisons.html)
-3. What is the most prevalent type of surgery? Hint: [Use IS NOT NULL](https://www.postgresql.org/docs/8.3/functions-comparison.html)
-4.What owner spent the most on their pet and how much was it? Hint: [Use SUM()](https://www.postgresql.org/docs/8.2/functions-aggregate.html)
+3. What is the most prevalent type of surgery?
+4. Which owner spent the most on their pet and how much was it? Hint: [Use SUM()](https://www.postgresql.org/docs/8.2/functions-aggregate.html)
 5. Look at the data and ask yourself what more questions one could ask!
