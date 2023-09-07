@@ -4,23 +4,34 @@
 
 You need to download [DBeaver](https://dbeaver.io). This is a free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases. 
 
-- Open DBeaver and click on the little blue "plugin plus"-icon.
-- Select `PostgreSQL`as database.
-- Copy information of the provided Credentials to the connection Settings on DBeaver
+- Open DBeaver and click on the little icon that loogs like an electrical-plug with a plus (new connection).
+- Select `PostgreSQL` as database.
+- The required information to set up the connection (i.e. the credentials) will be shared through slack. Please update these connection Settings in DBeaver:
     - `Host`
     - `Database`
-    - `User`== `Username`
+    - `User`
     - `Password`
     - `Port` (should be both times the same number already)
 - click on `Test Connection ...`
     - if connection is not causing an error --> Finish
     - otherwise check all your copy/pasted information again (maybe you copied some spaces...)
 
-Now you can have a look at your database: Expand the paths until "Schemas" --> "public" --> "Tables".
-You see that right now, you have no saved tables. 
-But we want to change that!
+Sometimes will will tell you that an additional driver is needed for the connection. In that case you can click on download / install and it should work afterwards.
+
+The configuration should look something like this:
+![setup_figure](../images/0.1_database_setup.png)
+
+If the setup worked, on the left side of DBeaver you should see the newly created connection (if you didn't give a custom name it will be called postgres). If you click on it (i.e. the little arrow next to it) you can expand the path:"postgres" --> "databases" --> "postgres" -->"schemas" --> "introduction" --> "tables".
+
+![figure](../images/0.2_database_connection.png)
+
+Now let's have a look at our data!
 
 ## SQL Queries
+
+First, we need a file (SQL-Script) in which we write our queries. To create such a file, right click on the Schema you are interested in (for now, use 'introduction' please), select 'SQL-Editor' --> "new SQL script".
+
+Into this script you can now write your Queries, and run them by clicking on the little yellow arrow (or using control + enter).
 
 - **Schema**: 
 
@@ -63,12 +74,13 @@ But we want to change that!
 
     `Condition` represents how we want the data to be filtered.
 
-    > **Exercise:** 
+    > **Exercise 1:** 
+    > Explore all tables in the schema Introduction and use SQL to:
     > - get all cases for women
     > - get all cases for men between 20 and 50
 
 ----
-- **Joining tables**
+- **JOINING TABLES**
     (inner join is default)
 
     ```SQL
@@ -76,7 +88,7 @@ But we want to change that!
     INNER JOIN table2 t2 ON t1.key1 = t2.key2
     ```
 
-    > **Exercise:** now with nice names!
+    > **Exercise 2:** now with nice names (i.e. replace the id's with the respective values form the other tables)!
     > - get all cases for women
     > - get all cases for men between 20 and 50
 
@@ -94,7 +106,7 @@ But we want to change that!
     
     The options are `ASC` and `DESC`.
 
-    > **Exercise:** 
+    > **Exercise 3:** 
     > - get all cases for women, order them by age-groups ascending
     > - get all cases for men between 20 and 50, order them by record_date descending
 
@@ -103,7 +115,7 @@ But we want to change that!
 
     eg. SUM ,AVG, COUNT, MAX, MIN
 
-    > **Exercise:** 
+    > **Exercise 4:** 
     > - get average number of cases for women
     > - get maximum number of cases for men
 
@@ -118,7 +130,7 @@ But we want to change that!
     GROUP BY column_name_1
     ```
 
-    > **Exercise:** 
+    > **Exercise 5:** 
     > - get sum of cases per gender per age group
 
 ---
@@ -135,16 +147,22 @@ But we want to change that!
     FROM table
     GROUP BY column_name_1
     HAVING COUNT(column_name_2) > 5; 
+    ```
 
+    > **Exercise 6:** 
+    > - Get all the dates with more then 80,000 cases.
 ---
 
 ### General order of SQL Commands:
+SQL - Queries need to stated in this specific order. You can not change the sequence.
+1. SELECT 
+1. FROM
+1. WHERE
+1. GROUP BY
+1. HAVING
+1. ORDER BY
+1. LIMIT
 
-1. SELECT FROM
-2. WHERE
-3. GROUP BY
-4. HAVING
-5. ORDER BY
 
 ---
 ## Resources:
