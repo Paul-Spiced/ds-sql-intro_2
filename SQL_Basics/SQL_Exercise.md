@@ -4,7 +4,7 @@
 
 You need to download [DBeaver](https://dbeaver.io). This is a free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases. 
 
-- Open DBeaver and click on the little icon that loogs like an electrical-plug with a plus (new connection).
+- Open DBeaver and click on the little icon that looks like an electrical-plug with a plus (new connection).
 - Select `PostgreSQL` as database.
 - The required information to set up the connection (i.e. the credentials) will be shared through slack. Please update these connection Settings in DBeaver:
     - `Host`
