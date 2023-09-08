@@ -1,47 +1,215 @@
-set schema 'introduction'; 
+SET SCHEMA 'introduction'; 
 
-insert into age_bucket (range) values ('0:5'), ('6:14'), ('15:19'), ('20:29'), ('30:39'), ('40:49'), ('50:59'),
-       ('60:69'), ('70:79'), ('80:89'), ('90');
-       
-select * from gender
+-- Exercise 1
+-- WHERE
 
-insert into gender (name) 
-    values ('male'), ('female');
+-- Explore all tables       
+SELECT * FROM record;
+SELECT * FROM gender;
+SELECT * FROM age_bucket;
 
-select id from age_bucket
+-- Get all cases for women
+SELECT * 
+FROM record 
+WHERE id_gender = 2;
 
-select * from record
+-- Get all cases for men between 20 AND 50 (age_bucket)
+SELECT 
+	* 
+FROM 
+	record 
+WHERE 
+	id_gender = 1 
+	AND id_age_bucket BETWEEN 4 AND 6;
 
-select min(record_date) from record
+-- Exercise 2
+-- JOINING TABLES
 
-select id from record where id_gender = 1 and id_age_bucket = 1 
+-- Get all cases for women (including gender names)
+SELECT 
+	r.id, 
+	r.record_date, 
+	g.name AS gender_name,  
+	r.cases
+FROM 
+	record r 
+INNER JOIN 
+	gender g ON g.id = r.id_gender
+WHERE 
+	r.id_gender = 2 ;
 
-select * from age_bucket;
+-- Get all cases for women (including gender names AND age_bucket names)
+SELECT 
+	r.id, 
+	r.record_date, 
+	g.name AS gender_name, 
+	ab.range AS age_bucket_name,  
+	r.cases 
+FROM 
+	record r 
+Inner JOIN 
+	gender g ON g.id = r.id_gender
+INNER JOIN 
+	age_bucket ab ON r.id_age_bucket = ab.id 
+WHERE 
+	r.id_gender = 2;
 
-select * from record where id_gender = 1 and id_age_bucket between 4 and 6 
+-- Get all cases for men between 20 AND 50 including gender names AND age_bucket names
+SELECT 
+	r.id, 
+	r.record_date, 
+	g.name AS gender_name, 
+	ab.range AS age_bucket_name,
+	r.cases 
+FROM 
+	record r 
+Inner JOIN 
+	gender g ON g.id = r.id_gender
+INNER JOIN
+	age_bucket ab ON r.id_age_bucket = ab.id 
+WHERE 
+	r.id_gender = 1 
+	AND r.id_age_bucket between 4 AND 6;
 
-select r.cases, r.record_date, g.name from record r 
-inner join gender g on g.id = r.id_gender
-where r.id_gender = 2 
+-- Exercise 3
+-- Order BY
 
-select r.cases, r.record_date, g.name, ab.range from record r 
-inner join gender g on g.id = r.id_gender
-inner join age_bucket ab on ab.id = r.id_age_bucket
-where r.id_gender = 1 and r.id_age_bucket between 4 and 6
+-- Get all cases for women ORDER them BY age_GROUPs ASCending
+SELECT 
+	r.id, 
+	r.record_date, 
+	g.name AS gender_name, 
+	ab.range AS age_bucket_name,
+	r.cases 
+FROM 
+	record r 
+INNER JOIN 
+	gender g ON g.id = r.id_gender
+INNER JOIN 
+	age_bucket ab ON r.id_age_bucket = ab.id 
+WHERE 
+	r.id_gender = 2 
+ORDER BY 
+	r.id_age_bucket ASC 
+
+-- ... AND also BY date (extra)
+SELECT 
+	r.id, 
+	r.record_date, 
+	g.name AS gender_name, 
+	ab.range AS age_bucket_name,  
+	r.cases FROM record r 
+INNER JOIN 
+	gender g ON g.id = r.id_gender
+INNER JOIN 
+	age_bucket ab ON r.id_age_bucket = ab.id 
+WHERE 
+	r.id_gender = 2 
+ORDER BY 
+	r.record_date ASC, 
+	r.id_age_bucket ASC;
+
+-- all cases for men between 20 AND 50, ORDER them BY record_date DESCending
+SELECT 
+	r.id,
+	r.record_date,
+	g.name AS gender_name,
+	ab.RANGE AS age_bucket_name,
+	r.cases 
+FROM 
+	record r 
+Inner JOIN 
+	gender g ON g.id = r.id_gender
+INNER JOIN 
+	age_bucket ab ON r.id_age_bucket = ab.id 
+WHERE 
+	r.id_gender = 1 AND r.id_age_bucket between 4 AND 6
+ORDER BY 
+	r.record_date DESC;
 
 
-select r.cases, r.record_date, g.name, ab.range from record r 
-inner join gender g on g.id = r.id_gender
-inner join age_bucket ab on ab.id = r.id_age_bucket
-where r.id_gender = 2 and r.id_age_bucket between 4 and 6
-order by r.record_date desc 
+-- Exercise 4
+-- MATHEMATICAL FUNCTIONS
 
-select avg(r.cases), g.name from record r 
-inner join gender g on g.id = r.id_gender
-group by g.name
+-- get average number of cases for women
+SELECT 
+	avg(r.cases) AS average_number_of_cases,
+	g.name AS gender 
+FROM 
+	record r 
+INNER JOIN 
+	gender g ON g.id = r.id_gender
+WHERE 
+	g.name='female'
+GROUP BY 
+	g.name;
 
-select avg(r.cases), g.name, ab.range from record r 
-inner join gender g on g.id = r.id_gender
-inner join age_bucket ab on ab.id = r.id_age_bucket
-group by g.name, ab.range
-order by 1 desc
+-- get maximum number of cases for men
+SELECT 
+	max(r.cases) AS average_number_of_cases,
+	g.name AS gender 
+FROM 
+	record r 
+INNER JOIN 
+	gender g ON g.id = r.id_gender
+WHERE 
+	g.name='male'
+GROUP BY
+	g.name
+ORDER BY 
+	1 DESC;
+
+-- Exercise 5
+-- GROUP BY
+
+-- get sum of cases per gender per age GROUP
+SELECT 
+	avg(r.cases) AS average_number_of_cases,
+	g.name AS gender,
+	ab.range AS age_group 
+FROM 
+	record r 
+INNER JOIN 
+	gender g ON g.id = r.id_gender
+INNER JOIN 
+	age_bucket ab ON ab.id = r.id_age_bucket
+GROUP BY 
+	g.name,
+	ab.range
+ORDER BY 
+	3 ASC,
+	2 DESC;
+
+-- AND a bit nicer looking
+SELECT 
+	g.name AS gender,
+	ab.range AS age_group,
+	round(avg(r.cases),0) AS average_number_of_cases
+FROM 
+	record r 
+INNER JOIN 
+	gender g ON g.id = r.id_gender
+INNER JOIN 
+	age_bucket ab ON ab.id = r.id_age_bucket
+GROUP BY 
+	g.name,
+	ab.range
+ORDER BY
+	2 ASC,
+	1 DESC;
+
+-- Exercise 6
+-- HAVING
+ 
+-- get all the dates with more then 80,000 combined cases
+SELECT 
+	r.record_date,
+	sum(r.cases) AS sum_of_cases
+FROM 
+	record r
+GROUP BY 
+	r.record_date 
+HAVING 
+	sum(r.cases)>80000
+ORDER BY 
+	2 DESC;
