@@ -16,7 +16,7 @@ You need to download [DBeaver](https://dbeaver.io). This is a free multi-platfor
     - if connection is not causing an error --> Finish
     - otherwise check all your copy/pasted information again (maybe you copied some spaces...)
 
-Sometimes will will tell you that an additional driver is needed for the connection. In that case you can click on download / install and it should work afterwards.
+Sometimes DBeaver will tell you that an additional driver is needed for the connection. In that case you can click on download / install and it should work afterwards.
 
 The configuration should look something like this:
 ![setup_figure](../images/0.1_database_setup.png)
