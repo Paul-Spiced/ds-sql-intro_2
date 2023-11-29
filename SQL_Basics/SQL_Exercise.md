@@ -19,7 +19,7 @@ You need to download [DBeaver](https://dbeaver.io). This is a free multi-platfor
 Sometimes DBeaver will tell you that an additional driver is needed for the connection. In that case you can click on download / install and it should work afterwards.
 
 The configuration should look something like this:
-![setup_figure](../images/0.1_database_setup.png)
+![setup_figure](../images/connection.png)
 
 If the setup worked, on the left side of DBeaver you should see the newly created connection (if you didn't give a custom name it will be called postgres). If you click on it (i.e. the little arrow next to it) you can expand the path:"postgres" --> "databases" --> "postgres" -->"schemas" --> "introduction" --> "tables".
 
