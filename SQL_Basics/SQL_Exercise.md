@@ -23,7 +23,7 @@ The configuration should look something like this:
 
 If the setup worked, on the left side of DBeaver you should see the newly created connection (if you didn't give a custom name it will be called postgres). If you click on it (i.e. the little arrow next to it) you can expand the path:"postgres" --> "databases" --> "postgres" -->"schemas" --> "introduction" --> "tables".
 
-![figure](../images/0_2_database_connection_english.png)
+![figure](../images/02_database_connection_english.png)
 
 Now let's have a look at our data!
 
