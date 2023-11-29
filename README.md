@@ -13,7 +13,7 @@ We will start with some Basics:
 
 let's get some sql practice. And answer the questions in:
 
-[SQL Practice](https://github.com/soiced-academy/ds-sql-intro/blob/main/SQL_Exercises/Exercise_petsowners.md)
+[SQL Practice](https://github.com/spiced-academy/ds-sql-intro/blob/main/SQL_Exercises/Exercise_petsowners.md)
 
 -------
 
