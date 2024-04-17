@@ -131,7 +131,7 @@ Into this script you can now write your Queries, and run them by clicking on the
     ```
 
     > **Exercise 5:** 
-    > - get sum of cases per gender per age group
+    > - get average of cases per gender per age group
 
 ---
 - **HAVING**
@@ -157,6 +157,7 @@ Into this script you can now write your Queries, and run them by clicking on the
 SQL - Queries need to stated in this specific order. You can not change the sequence.
 1. SELECT 
 1. FROM
+1. JOIN
 1. WHERE
 1. GROUP BY
 1. HAVING
