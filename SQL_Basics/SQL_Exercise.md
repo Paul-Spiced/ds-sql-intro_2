@@ -156,13 +156,13 @@ Into this script you can now write your Queries, and run them by clicking on the
 ### General order of SQL Commands:
 SQL - Queries need to stated in this specific order. You can not change the sequence.
 1. SELECT 
-1. FROM
-1. JOIN
-1. WHERE
-1. GROUP BY
-1. HAVING
-1. ORDER BY
-1. LIMIT
+2. FROM
+3. JOIN
+4. WHERE
+5. GROUP BY
+6. HAVING
+7. ORDER BY
+8. LIMIT
 
 
 ---
