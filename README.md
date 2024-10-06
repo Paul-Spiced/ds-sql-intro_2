@@ -1,3 +1,4 @@
+ 
 # Intro to SQL
 
 In this intro to SQL you will learn how to connect to PostgreSQL databases and query them.
@@ -20,3 +21,7 @@ let's get some sql practice. And answer the questions in:
 And if this is too boring continue with this if you have some free time:
 
 [SQL Exercises Monalisa](https://github.com/spiced-academy/ds-sql-intro/blob/main/SQL_Exercises_Complex/Exercise_monalisa.md)
+=======
+# ds-sql-intro_2
+sql query
+ 
